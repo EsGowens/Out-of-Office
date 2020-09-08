@@ -14,7 +14,7 @@ function setup () {
     graphic.textFont(font)
     graphic.textSize(500)
     graphic.textAlign(CENTER, CENTER)
-    graphic.text("oas", 600, 260)
+    graphic.text("ooo", 600, 260)
 }
 
 function draw () {
@@ -24,7 +24,8 @@ function draw () {
 
     for (let y = 0; y < 12; y = y +1) {
 
-        const position = 0.5
+        let position = winMouseX / windowWidth
+        position = easeInOutCubic(position)
 
         const sx = 0
         const sy = y * tileSize * position
