@@ -2,7 +2,7 @@ let graphic
 let font
 
 function preload () {
-    font = loadFont("spacegrotesk-medium.otf")
+    font = loadFont("assets/spacegrotesk-medium.otf")
 }
 
 function setup () {
@@ -24,10 +24,12 @@ function draw () {
 
     for (let y = 0; y < 12; y = y +1) {
 
+        const position = 0.5
+
         const sx = 0
-        const sy = y * tileSize
+        const sy = y * tileSize * position
         const sw = 1200
-        const sh = tileSize
+        const sh = tileSize * position + (600 - tileSize) * (1 - position)
         
         const dx = 0
         const dy = y * tileSize
